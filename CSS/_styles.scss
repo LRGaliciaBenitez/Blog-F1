@@ -1,0 +1,294 @@
+@use "./base" as *;
+
+body {
+    font-family: $fontFamylyMain;
+}
+
+.header {
+    padding: 20px;
+    width: 100%;
+    background-color: $rojoFerrari;
+    @include displayFlex(row, space-between, center);
+    box-sizing: border-box;
+
+    @include from(tablet) {
+        @include displayFlex(row, space-between, center);
+    }
+
+    .header__logo {
+        @include imgLogoResponsive(100px, 100px);
+        border-radius: 10px;
+
+        @include from(tablet) {
+            @include imgLogoResponsive(150px, 150px);
+        }
+    }
+
+    .navbar  {
+        border-radius: 10px;
+    }
+}
+
+.main {
+    padding: 20px 0;
+    width: 100%;
+    @include displayFlex(column, start, center);
+    box-sizing: border-box;
+
+    .presentacion {
+        width: 80%;
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+
+        h1 {
+            font-size: $fontSizeTitle;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: $fontSizeTextSmall;
+            color: $rojoFerrari;
+            font-weight: 400;
+        }
+    }
+
+    .ultimas-noticias {
+        width: 90%;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+        @include displayFlex(column, center, center);
+
+        h2 {
+            @extend %subtitles;
+            margin-bottom: 10px;
+        }
+
+        div {
+            width: 100%;
+            padding: 10px 0;
+            box-sizing: border-box;
+            @include from(tablet) {
+                @include displayFlex(row, space-around, center);
+            }
+
+            .noticia {
+                @include displayFlex(column, center, center);
+                margin-bottom: 20px;
+                max-height: 550px;
+
+                @include from(tablet) {
+                    width: 45%;
+                }
+
+                h3 {
+                    text-align: center;
+                    margin-bottom: 10px;
+                    font-weight: 700;
+                    font-size: $fontSizeh3;
+                }
+    
+                p {
+                    text-align: left;
+                    font-size: $fontSizeTextSmall;
+                    margin-bottom: 10px;
+                }
+    
+                a {
+                    width: 100%;
+                    text-align: left;
+                    font-size: $fontSizeA;
+                    margin-bottom: 20px;
+    
+                    &:hover {
+                        text-decoration: underline;
+                        color: $rojoFerrari;
+                    }
+                }
+    
+                img {
+                    display: block;
+                    @include imgLogoResponsive(180px, 130px);
+                    border-radius: 10px;
+
+                    @include from(tablet) {
+                        @include imgLogoResponsive(250px, 200px);
+                    }
+                }
+            }
+        }
+    }
+
+    .carrusel {
+        width: 90%;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+        @include displayFlex(column, center, center);
+
+        @include from(tablet) {
+            width: 60%;
+        }
+
+        h2 {
+            @extend %subtitles;
+            margin-bottom: 10px;
+        }
+    }
+
+    .tarjetas_pilotos {
+        width: 90%;
+        background-color: black;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+        @include displayFlex(column, center, center);
+
+        h2 {
+            @extend %subtitles;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .tarjetas {
+            width: 100%;
+            padding: 10px 0;
+            box-sizing: border-box;
+            @include displayGrid(1, 20px);
+
+            @include from(tablet) {
+                @include displayGrid(2, 20px);
+            }
+
+            @include from(pc) {
+                @include displayGrid(3, 20px);
+            }
+
+            .card {
+                &:hover {
+                    box-shadow: 0 0 20px rgba(251, 0, 0, 0.8);
+                    cursor: pointer;
+                }
+
+                p {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .informacion_eqF1 {
+        width: 90%;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+        @include displayFlex(column, center, center);
+
+        @include from(tablet) {
+            width: 70%;
+        }
+
+        h2 {
+            @extend %subtitles;
+            margin-bottom: 10px;
+        }
+    }
+
+}
+
+.footer {
+    width: 100%;
+    background-color: $rojoFerrari;
+    padding: 20px;
+    box-sizing: border-box;
+    @include displayFlex(column, center, center);
+    gap: 20px;
+    text-align: center;
+    color: white;
+
+    @include from(tablet) {
+        @include displayFlex(row, space-between, center);
+    }
+
+    .footer__container1 {
+
+        @include from(tablet) {
+            width: 30%;
+        }
+
+        img {
+            @include imgLogoResponsive(100px, 100px);
+            border-radius: 10px;
+    
+            @include from(tablet) {
+                @include imgLogoResponsive(150px, 150px);
+            }
+        }
+    }
+
+    .footer__container {
+        width: 70%;
+        @include displayFlex(column, center, center);
+        box-sizing: border-box;
+        gap: 10px;
+
+        @include from(tablet) {
+            width: 30%;
+        }
+
+        p {
+            font-size: $fontSizeTextSmall;
+            font-weight: 400;
+        }
+
+        div {
+            width: 50%;
+            padding: 10px 0;
+            box-sizing: border-box;
+            @include displayFlex(row, space-evenly, center);
+
+            @include from(tablet) {
+                width: 100%;
+            }
+
+            a {
+                border-radius: 60%;
+
+                i {
+                    color: white;
+                    font-size: clamp(1.3rem, 2vw, 2.2rem);
+                }
+            }
+        }
+    }
+
+    .footer__container2 {
+        width: 70%;
+        @include displayFlex(column, center, center);
+        box-sizing: border-box;
+        gap: 10px;
+
+        @include from(tablet) {
+            width: 30%;
+        }
+
+        a {
+            font-size: $fontSizeTextSmall;
+            font-weight: 400;
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+                color: black;
+            }
+        }
+    }
+}

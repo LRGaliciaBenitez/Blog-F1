@@ -1,0 +1,330 @@
+.main .ultimas-noticias h2, .main .carrusel h2, .main .tarjetas_pilotos h2, .main .informacion_eqF1 h2 {
+  font-size: clamp(1.2rem, 1vw + 0.5rem, 2.7rem);
+  font-weight: 700;
+  text-align: center;
+  color: #C00000;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  padding: 20px;
+  width: 100%;
+  background-color: #C00000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.header .header__logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .header .header__logo {
+    width: 150px;
+    height: 150px;
+  }
+}
+.header .navbar {
+  border-radius: 10px;
+}
+
+.main {
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  box-sizing: border-box;
+}
+.main .presentacion {
+  width: 80%;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+.main .presentacion h1 {
+  font-size: clamp(1.5rem, 2vw + 0.5rem, 3rem);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.main .presentacion p {
+  font-size: clamp(0.9rem, 1vw + 0.5rem, 1.3rem);
+  color: #C00000;
+  font-weight: 400;
+}
+.main .ultimas-noticias {
+  width: 90%;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .ultimas-noticias h2 {
+  margin-bottom: 10px;
+}
+.main .ultimas-noticias div {
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .main .ultimas-noticias div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.main .ultimas-noticias div .noticia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  max-height: 550px;
+}
+@media (min-width: 768px) {
+  .main .ultimas-noticias div .noticia {
+    width: 45%;
+  }
+}
+.main .ultimas-noticias div .noticia h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: clamp(1rem, 1vw + 0.5rem, 2rem);
+}
+.main .ultimas-noticias div .noticia p {
+  text-align: left;
+  font-size: clamp(0.9rem, 1vw + 0.5rem, 1.3rem);
+  margin-bottom: 10px;
+}
+.main .ultimas-noticias div .noticia a {
+  width: 100%;
+  text-align: left;
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 1.2rem);
+  margin-bottom: 20px;
+}
+.main .ultimas-noticias div .noticia a:hover {
+  text-decoration: underline;
+  color: #C00000;
+}
+.main .ultimas-noticias div .noticia img {
+  display: block;
+  width: 180px;
+  height: 130px;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .main .ultimas-noticias div .noticia img {
+    width: 250px;
+    height: 200px;
+  }
+}
+.main .carrusel {
+  width: 90%;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .main .carrusel {
+    width: 60%;
+  }
+}
+.main .carrusel h2 {
+  margin-bottom: 10px;
+}
+.main .tarjetas_pilotos {
+  width: 90%;
+  background-color: black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .tarjetas_pilotos h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+.main .tarjetas_pilotos .tarjetas {
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+@media (min-width: 768px) {
+  .main .tarjetas_pilotos .tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .main .tarjetas_pilotos .tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+}
+.main .tarjetas_pilotos .tarjetas .card:hover {
+  box-shadow: 0 0 20px rgba(251, 0, 0, 0.8);
+  cursor: pointer;
+}
+.main .tarjetas_pilotos .tarjetas .card p {
+  margin-bottom: 10px;
+}
+.main .informacion_eqF1 {
+  width: 90%;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .main .informacion_eqF1 {
+    width: 70%;
+  }
+}
+.main .informacion_eqF1 h2 {
+  margin-bottom: 10px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #C00000;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  color: white;
+}
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .footer .footer__container1 {
+    width: 30%;
+  }
+}
+.footer .footer__container1 img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .footer .footer__container1 img {
+    width: 150px;
+    height: 150px;
+  }
+}
+.footer .footer__container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .footer .footer__container {
+    width: 30%;
+  }
+}
+.footer .footer__container p {
+  font-size: clamp(0.9rem, 1vw + 0.5rem, 1.3rem);
+  font-weight: 400;
+}
+.footer .footer__container div {
+  width: 50%;
+  padding: 10px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .footer .footer__container div {
+    width: 100%;
+  }
+}
+.footer .footer__container div a {
+  border-radius: 60%;
+}
+.footer .footer__container div a i {
+  color: white;
+  font-size: clamp(1.3rem, 2vw, 2.2rem);
+}
+.footer .footer__container2 {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .footer .footer__container2 {
+    width: 30%;
+  }
+}
+.footer .footer__container2 a {
+  font-size: clamp(0.9rem, 1vw + 0.5rem, 1.3rem);
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+.footer .footer__container2 a:hover {
+  text-decoration: underline;
+  color: black;
+}/*# sourceMappingURL=main.css.map */
