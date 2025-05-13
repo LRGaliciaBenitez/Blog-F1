@@ -1,0 +1,141 @@
+@use "./base" as *;
+
+body {
+    font-family: $fontFamylyMain;
+}
+
+.header {
+    padding: 20px;
+    width: 100%;
+    background-color: $rojoFerrari;
+    @include displayFlex(row, space-between, center);
+    box-sizing: border-box;
+
+    @include from(tablet) {
+        @include displayFlex(row, space-between, center);
+    }
+
+    .header__logo {
+        @include imgLogoResponsive(100px, 100px);
+        border-radius: 10px;
+
+        @include from(tablet) {
+            @include imgLogoResponsive(150px, 150px);
+        }
+    }
+
+    .navbar  {
+        border-radius: 10px;
+    }
+}
+
+.main {
+    padding: 20px 0;
+    width: 100%;
+    @include displayFlex(column, start, center);
+    box-sizing: border-box;
+
+    .main__containerForm {
+        width: 90%;
+        @include displayFlex(column, start, center);
+        box-sizing: border-box;
+        margin-bottom: 30px;
+
+        h2 {
+            @extend %subtitles;
+            margin-bottom: 30px;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: $rojoFerrari;
+    padding: 20px;
+    box-sizing: border-box;
+    @include displayFlex(column, center, center);
+    gap: 20px;
+    text-align: center;
+    color: white;
+
+    @include from(tablet) {
+        @include displayFlex(row, space-between, center);
+    }
+
+    .footer__container1 {
+
+        @include from(tablet) {
+            width: 30%;
+        }
+
+        img {
+            @include imgLogoResponsive(100px, 100px);
+            border-radius: 10px;
+    
+            @include from(tablet) {
+                @include imgLogoResponsive(150px, 150px);
+            }
+        }
+    }
+
+    .footer__container {
+        width: 70%;
+        @include displayFlex(column, center, center);
+        box-sizing: border-box;
+        gap: 10px;
+
+        @include from(tablet) {
+            width: 30%;
+        }
+
+        p {
+            font-size: $fontSizeTextSmall;
+            font-weight: 400;
+        }
+
+        div {
+            width: 50%;
+            padding: 10px 0;
+            box-sizing: border-box;
+            @include displayFlex(row, space-evenly, center);
+
+            @include from(tablet) {
+                width: 100%;
+            }
+
+            a {
+                border-radius: 60%;
+
+                i {
+                    color: white;
+                    font-size: clamp(1.3rem, 2vw, 2.2rem);
+                }
+            }
+        }
+    }
+
+    .footer__container2 {
+        width: 70%;
+        @include displayFlex(column, center, center);
+        box-sizing: border-box;
+        gap: 10px;
+
+        @include from(tablet) {
+            width: 30%;
+        }
+
+        a {
+            font-size: $fontSizeTextSmall;
+            font-weight: 400;
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+                color: black;
+            }
+        }
+    }
+}
+
